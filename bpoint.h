@@ -1,8 +1,7 @@
+#ifndef BPOINT
+#define BPOINT
 #include <iostream>
 #include "matrix.h"
-//#include "extpair.h"
-//#include "fractal.h"
-//#include "bpoint.h"
 
 using namespace std;
 class bpoint {
@@ -11,28 +10,33 @@ class bpoint {
 	{
 		extpair pointh(x,y);
 		matrix transformh(k,l,m,n);
-		point=pointh;
-		transform=transformh;	
-	};
+		point.xKoord = x;
+		point.yKoord = y;
+		transform.oo = 1;
+		transform.ot = 0;
+		transform.to = 0;
+		transform.tt = 1;
+	}
+
 	extpair point;
 	matrix transform;
+
 	extpair LinearTr(const extpair &x)
 	{
-		extpair tmp;
 		matrix id(1,0,0,1);
-		tmp=transform.MultRow(x)+(id-transform).MultRow(point);
-		return tmp;
-	};
+		return transform.MultRow(x)+(id-transform).MultRow(point);
+	}
 
 	friend bool operator==(const bpoint &a1,const bpoint &a2); 
+
 	bpoint & operator=(const bpoint & m){
 	point=m.point;
 	transform=m.transform;
 return *this;
-	};
+	}
 };
 
 bool operator==(const bpoint &a1,const bpoint &a2){
-	
-	return ((a1.point==a2.point)&&(a1.transform==a2.transform));
-};
+	return (a1.point==a2.point)&&(a1.transform==a2.transform);
+}
+#endif

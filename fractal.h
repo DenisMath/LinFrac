@@ -6,10 +6,6 @@
 #include <deque>
 #include <algorithm>
 #include <fstream>
-//#include <iomanip>
-//#include "matrix.h"
-//#include "extpair.h"
-//#include "fractal.h"
 #include "bpoint.h"
 typedef list<extpair> FractalType; 
 
@@ -51,6 +47,7 @@ class fractal {
 		fracset.unique();
 		}
 	}
+
 void convert(int* massive)
 {
 			       	int frsize=fracset.size();

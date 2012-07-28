@@ -19,15 +19,17 @@ int main()
    {bp.point=p+shp;
    (f.basicpoints).push_back(bp);
    p=rotr.MultRow(p);
-   };
+   }
    //vector< vector<bpoint> > memofr;
    //memofr.clear();
-   f.build(8);
+   f.build(10);
 vector<fractal> input;
 input.push_back(f);
 input.push_back(f);
-printtops_out(input,.000001);
-//f.writetops(.000001);
+input.push_back(f);
+input.push_back(f);
+//printtops_out(input,.000001);
+f.writetops(.000001);
    //f.writetops_int(.000001);
 }
 

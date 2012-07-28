@@ -1,8 +1,7 @@
+#ifndef MATRIX
+#define MATRIX
 #include <iostream>
 #include "extpair.h"
-//#include "matrix.h"
-//#include "fractal.h"
-//#include "bpoint.h"
 
 using namespace std;
 class matrix {
@@ -52,7 +51,7 @@ matrix operator-(const matrix &a1){
 	tmp.to=-a1.to;
 	tmp.tt=-a1.tt;
 	return tmp;
-};
+}
 matrix operator+(const matrix & a1, const matrix & a2){
 	matrix tmp;
 	tmp.oo=a1.oo+a2.oo;
@@ -60,7 +59,7 @@ matrix operator+(const matrix & a1, const matrix & a2){
 	tmp.to=a1.to+a2.to;
 	tmp.tt=a1.tt+a2.tt;
 	return tmp;
-};
+}
 matrix operator-(const matrix & a1, const matrix & a2){
 	matrix tmp;
 	tmp.oo=a1.oo-a2.oo;
@@ -68,7 +67,7 @@ matrix operator-(const matrix & a1, const matrix & a2){
 	tmp.to=a1.to-a2.to;
 	tmp.tt=a1.tt-a2.tt;
 	return tmp;
-};
+}
 matrix operator*(const matrix & a1, const matrix & a2){
 	matrix tmp;
 	tmp.oo=a1.oo*a2.oo+a1.ot*a2.to;
@@ -76,8 +75,9 @@ matrix operator*(const matrix & a1, const matrix & a2){
 	tmp.to=a1.to*a2.oo+a1.tt*a2.to;
 	tmp.tt=a1.to*a2.ot+a1.tt*a2.tt;
 	return tmp;
-};
+}
 bool operator==(const matrix & a1, const matrix & a2){
 	
 	return ((a1.oo==a2.oo)&&(a1.ot==a2.ot)&&(a1.to==a2.to)&&(a1.tt==a2.tt));
-};
+}
+#endif
