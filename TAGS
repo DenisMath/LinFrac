@@ -1,0 +1,87 @@
+
+frac.cpp,15
+int main(2,22
+
+main.cpp,46
+int main(7,119
+t1 15,233
+int frsize=17,259
+
+matrix.cpp,154
+#define PI 6,105
+int main(7,127
+	       	double m;338,10138
+	       	double m; m=338,10138
+	       	cout<cout339,10169
+	       	cin >> n;341,10248
+
+my.cpp,34
+#define PI 6,108
+int main(7,130
+
+bpoint.h,283
+using namespace std;7,109
+class bpoint 8,130
+	bpoint(bpoint::bpoint10,154
+	extpair point;bpoint::point17,324
+	matrix transform;bpoint::transform18,340
+	extpair LinearTr(bpoint::LinearTr19,359
+	bpoint & operator=(bpoint::operator=28,573
+bool operator==(operator==35,674
+
+extpair.h,436
+#define EXTPAIR2,16
+using namespace std;5,53
+class extpair 6,74
+	extpair(extpair::extpair8,99
+	extpair(extpair::extpair13,140
+	float xKoord;extpair::xKoord18,196
+	float yKoord;extpair::yKoord19,211
+	extpair &operator=(extpair::operator=26,553
+extpair  operator-(extpair::operator-31,645
+ extpair operator+(41,773
+inline extpair operator-(48,927
+inline bool operator==(operator==55,1087
+inline bool operator<(60,1212
+
+fractal.h,515
+#define FRACTAL2,16
+typedef list<extpair> FractalType;14,252
+using namespace std;16,289
+class fractal 17,310
+	vector<bpoint> basicpoints;fractal::basicpoints20,336
+	FractalType fracset;fractal::fracset22,391
+	void addpoint(fractal::addpoint24,448
+	void build(fractal::build29,577
+void convert(fractal::convert54,1186
+void convert_float(66,1436
+	void writetops(78,1662
+for(int t=0; t<t103,2579
+  FILE * pFile;149,4308
+  pFile 150,4324
+  pFile 155,4761
+int i=156,4804
+for(int t=0; t<t157,4813
+
+fractalout.h,120
+#define FRACTALOUT2,19
+void printtops_out(4,59
+for(int t=0; t<frsize_rem;frsize_rem38,1238
+delete[] result;45,1396
+
+matrix.h,453
+using namespace std;7,109
+class matrix 8,130
+			matrix(matrix::matrix10,154
+	matrix(matrix::matrix17,204
+	float oo;matrix::oo24,283
+	float ot;matrix::ot25,294
+	float to;matrix::to26,305
+	float tt;matrix::tt27,316
+	extpair MultRow(matrix::MultRow28,327
+	matrix & operator=(matrix::operator=40,789
+matrix operator-(48,891
+matrix operator+(56,1020
+matrix operator-(64,1189
+matrix operator*(72,1358
+bool operator==(operator==80,1575
