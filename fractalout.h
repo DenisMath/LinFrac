@@ -1,7 +1,7 @@
 #ifndef FRACTALOUT
 #define FRACTALOUT
 #include "fractal.h"
-void printtops_out(vector<fractal> input,float x)
+void printtops_out(vector<Fractal> input,float x)
 {
 int in_size = input.size();
   FILE * pFile;

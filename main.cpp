@@ -1,4 +1,4 @@
-#include "extpair.h"
+#include "Extpair.h"
 #include "fractal.h"
 #include <stdio.h>
 #include <iostream>

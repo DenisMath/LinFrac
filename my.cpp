@@ -1,5 +1,5 @@
 //#include "matrix.h"
-//#include "extpair.h"
+//#include "Extpair.h"
 #include "fractalout.h"
 #include <cmath>
 //#include "bpoint.h"
@@ -8,7 +8,7 @@ int main()
 {  int n;
    cout << " Input number of basic points: ";
    cin >> n;
-   extpair p(0,100),shp(280,330);
+   Extpair p(0,100),shp(280,330);
    bpoint bp(0,0,.5,0,0,.5);
    matrix rotr(cos(2*PI/n),-sin(2*PI/n),sin(2*PI/n),cos(2*PI/n));
    int psize=n;
