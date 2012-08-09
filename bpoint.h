@@ -6,15 +6,8 @@
 using namespace std;
 class BasicPoint {
 	public:
-	BasicPoint(float x=0,float y=0,float k=1,float l=0,float m=0,float n=1)
-	{
-		point.xKoord = x;
-		point.yKoord = y;
-		transform.oo = k;
-		transform.ot = l;
-		transform.to = m;
-		transform.tt = n;
-	}
+	BasicPoint(float x=0,float y=0,float k=1,float l=0,float m=0,float n=1):point(x,y),transform(k,l,m,n)
+	{ }
 
 	Extpair point;
 	Matrix transform;

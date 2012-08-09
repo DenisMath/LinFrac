@@ -5,16 +5,9 @@
 using namespace std;
 class Extpair {
 	public:
-	Extpair()
-	{
-		xKoord=0;
-		yKoord=0;
-	}
-	Extpair(float x,float y)
-	{
-		xKoord=x;
-		yKoord=y;
-	}
+	Extpair(float x=0,float y=0):xKoord=0,yKoord=0
+	{ }
+
 	float xKoord;
 	float yKoord;
 	

@@ -1,87 +1,76 @@
-
-frac.cpp,15
-int main(2,22
-
-main.cpp,46
-int main(7,119
-t1 15,233
-int frsize=17,259
-
-matrix.cpp,154
-#define PI 6,105
-int main(7,127
-	       	double m;338,10138
-	       	double m; m=338,10138
-	       	cout<cout339,10169
-	       	cin >> n;341,10248
-
-my.cpp,34
-#define PI 6,108
-int main(7,130
-
-bpoint.h,283
-using namespace std;7,109
-class bpoint 8,130
-	bpoint(bpoint::bpoint10,154
-	extpair point;bpoint::point17,324
-	matrix transform;bpoint::transform18,340
-	extpair LinearTr(bpoint::LinearTr19,359
-	bpoint & operator=(bpoint::operator=28,573
-bool operator==(operator==35,674
-
-extpair.h,436
-#define EXTPAIR2,16
-using namespace std;5,53
-class extpair 6,74
-	extpair(extpair::extpair8,99
-	extpair(extpair::extpair13,140
-	float xKoord;extpair::xKoord18,196
-	float yKoord;extpair::yKoord19,211
-	extpair &operator=(extpair::operator=26,553
-extpair  operator-(extpair::operator-31,645
- extpair operator+(41,773
-inline extpair operator-(48,927
-inline bool operator==(operator==55,1087
-inline bool operator<(60,1212
-
-fractal.h,515
-#define FRACTAL2,16
-typedef list<extpair> FractalType;14,252
-using namespace std;16,289
-class fractal 17,310
-	vector<bpoint> basicpoints;fractal::basicpoints20,336
-	FractalType fracset;fractal::fracset22,391
-	void addpoint(fractal::addpoint24,448
-	void build(fractal::build29,577
-void convert(fractal::convert54,1186
-void convert_float(66,1436
-	void writetops(78,1662
-for(int t=0; t<t103,2579
-  FILE * pFile;149,4308
-  pFile 150,4324
-  pFile 155,4761
-int i=156,4804
-for(int t=0; t<t157,4813
-
-fractalout.h,120
-#define FRACTALOUT2,19
-void printtops_out(4,59
-for(int t=0; t<frsize_rem;frsize_rem38,1238
-delete[] result;45,1396
-
-matrix.h,453
-using namespace std;7,109
-class matrix 8,130
-			matrix(matrix::matrix10,154
-	matrix(matrix::matrix17,204
-	float oo;matrix::oo24,283
-	float ot;matrix::ot25,294
-	float to;matrix::to26,305
-	float tt;matrix::tt27,316
-	extpair MultRow(matrix::MultRow28,327
-	matrix & operator=(matrix::operator=40,789
-matrix operator-(48,891
-matrix operator+(56,1020
-matrix operator-(64,1189
-matrix operator*(72,1358
-bool operator==(operator==80,1575
+BPOINT	bpoint.h	2
+BasicPoint	bpoint.h	7
+BasicPoint::BasicPoint	bpoint.h	/^	BasicPoint(float x=0,float y=0,float k=1,float l=/
+BasicPoint::linearTr	bpoint.h	/^	Extpair linearTr(const Extpair &x)$/
+BasicPoint::operator=	bpoint.h	/^	BasicPoint & operator=(const BasicPoint & m){$/
+BasicPoint::point	bpoint.h	19
+BasicPoint::transform	bpoint.h	20
+EXTPAIR	extpair.h	2
+Extpair	extpair.h	6
+Extpair::Extpair	extpair.h	/^	Extpair()$/
+Extpair::Extpair	extpair.h	/^	Extpair(float x,float y)$/
+Extpair::operator-	extpair.h	/^Extpair  operator-(const Extpair& a1){$/
+Extpair::operator=	extpair.h	/^	Extpair &operator=(const Extpair &m){$/
+Extpair::xKoord	extpair.h	18
+Extpair::yKoord	extpair.h	19
+FRACTAL	fractal.h	2
+FRACTALOUT	fractalout.h	2
+Fractal	fractal.h	15
+Fractal::addpoint	fractal.h	/^	void addpoint(float x,float y,float k,float l,flo/
+Fractal::basicpoints	fractal.h	18
+Fractal::build	fractal.h	/^	void build(int n)$/
+Fractal::convert	fractal.h	/^void convert(int* massive)$/
+Fractal::fracset	fractal.h	20
+FractalType	fractal.h	11
+MATRIX	matrix.h	2
+Matrix	matrix.h	7
+Matrix::Matrix	matrix.h	/^			Matrix()$/
+Matrix::Matrix	matrix.h	/^	Matrix(float x,float y,float z,float v)$/
+Matrix::multRow	matrix.h	/^	Extpair multRow(const Extpair &v)$/
+Matrix::oo	matrix.h	23
+Matrix::operator=	matrix.h	/^	Matrix & operator=(const Matrix &m){$/
+Matrix::ot	matrix.h	24
+Matrix::to	matrix.h	25
+Matrix::tt	matrix.h	26
+Mfrac.cpp	frac.cpp	/^int main(){ $/
+Mmain.cpp	main.cpp	/^int main()$/
+Mmatrix.cpp	matrix.cpp	/^int main()$/
+Mmy.cpp	my.cpp	/^int main()$/
+Mnew.cpp	new.cpp	/^int main()$/
+PI	matrix.cpp	6
+PI	my.cpp	6
+convert_float	fractal.h	/^void convert_float(float* massive)$/
+cout	matrix.cpp	339
+frsize	main.cpp	17
+frsize_rem	fractalout.h	38
+i	fractal.h	182
+m	matrix.cpp	338
+m	matrix.cpp	338
+n	matrix.cpp	341
+operator*	matrix.h	/^Matrix operator*(const Matrix & a1, const Matrix &/
+operator+	extpair.h	/^ Extpair operator+(const Extpair &a1, const Extpai/
+operator+	matrix.h	/^Matrix operator+(const Matrix & a1, const Matrix &/
+operator-	extpair.h	/^inline Extpair operator-(const Extpair &a1, const /
+operator-	matrix.h	/^Matrix operator-(const Matrix &a1){$/
+operator-	matrix.h	/^Matrix operator-(const Matrix & a1, const Matrix &/
+operator<	extpair.h	/^inline bool operator<(const Extpair &a1, const Ext/
+operator==	bpoint.h	/^bool operator==(const BasicPoint &a1,const BasicPo/
+operator==	extpair.h	/^inline bool operator==(const Extpair &a1, const Ex/
+operator==	matrix.h	/^bool operator==(const Matrix & a1, const Matrix & /
+pFile	fractal.h	175
+pFile	fractal.h	176
+pFile	fractal.h	181
+printtops_out	fractalout.h	/^void printtops_out(vector<Fractal> input,float x)$/
+result	fractalout.h	45
+std	bpoint.h	6
+std	extpair.h	5
+std	fractal.h	14
+std	matrix.h	6
+t	fractal.h	129
+t	fractal.h	183
+t1	main.cpp	15
+t1	new.cpp	9
+t1	new.cpp	10
+t2	new.cpp	9
+t2	new.cpp	12
+writetops	fractal.h	/^	void writetops(float x)$/

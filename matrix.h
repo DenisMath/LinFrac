@@ -6,20 +6,10 @@
 using namespace std;
 class Matrix {
 	public:
-			Matrix()
-	{
-		oo=1;
-		ot=0;
-		to=0;
-		tt=1;
-	}
-	Matrix(float x,float y,float z,float v)
-	{
-		oo=x;
-		ot=y;
-		to=z;
-		tt=v;
-	}
+
+	Matrix(float x,float y,float z,float v):oo(x),ot(y),to(z),tt(v)
+	{ }
+
 	float oo;
 	float ot;
 	float to;
