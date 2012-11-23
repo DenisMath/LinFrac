@@ -3,7 +3,7 @@
 #include <iostream>
 #include "extpair.h"
 
-using namespace std;
+//using namespace std;
 class Matrix {
 	public:
 

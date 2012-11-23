@@ -3,7 +3,7 @@
 #include <iostream>
 #include "matrix.h"
 
-using namespace std;
+//using namespace std;
 class BasicPoint {
 	public:
 	BasicPoint(float x=0,float y=0,float k=1,float l=0,float m=0,float n=1):point(x,y),transform(k,l,m,n)

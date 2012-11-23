@@ -2,7 +2,7 @@
 #define EXTPAIR
 #include <iostream>
 
-using namespace std;
+//using namespace std;
 class Extpair {
 	public:
 	Extpair(float x=0,float y=0):xKoord=0,yKoord=0

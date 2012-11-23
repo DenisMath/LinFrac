@@ -21,6 +21,10 @@
 LPDIRECT3D9         g_pD3D = NULL; // Used to create the D3DDevice
 LPDIRECT3DDEVICE9   g_pd3dDevice = NULL; // Our rendering device
 
+// Global Variables:
+HINSTANCE hInst;								// current instance
+LRESULT CALLBACK	DlgProc(HWND, UINT, WPARAM, LPARAM);
+
 
 
 
@@ -90,6 +94,7 @@ VOID Cleanup()
 //-----------------------------------------------------------------------------
 VOID Render()
 {
+	
     if( NULL == g_pd3dDevice )
         return;
 
@@ -204,8 +209,47 @@ INT WINAPI wWinMain( HINSTANCE hInst, HINSTANCE, LPWSTR, INT )
     }
 
     UnregisterClass( L"D3D Tutorial", wc.hInstance );
+
+	DialogBox((hInst = hInstance), (LPCTSTR)IDD_DIALOG, NULL, (DLGPROC)DlgProc);
     return 0;
+
+
 }
+
+LRESULT CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	BOOL bRet = FALSE;
+	BOOL bCmd = FALSE;
+	char sText[256];
+	switch (message) 
+	{
+		case WM_INITDIALOG:
+			bRet = TRUE;
+			break;
+		case WM_COMMAND:
+			bRet = TRUE;
+			bCmd = TRUE;
+			break;
+		case WM_DESTROY:
+			PostQuitMessage(0);
+			EndDialog(hWnd, TRUE); 
+			break;
+	}
+	if(bCmd)
+	switch(LOWORD(wParam))
+	{
+		case IDOK:
+			if(GetDlgItemText(hWnd,IDC_EDIT1,sText,255))
+			   SetDlgItemText(hWnd,IDC_EDIT2,sText);
+			break;
+		case IDM_EXIT:
+		case IDCANCEL: 
+			SendMessage(hWnd,WM_DESTROY,0,0);
+			break;
+	}
+	return bRet;
+}
+
 
 
 
